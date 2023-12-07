@@ -10,9 +10,10 @@ function validaNum(p,s){
 
 
 formulario.addEventListener('submit' , function(e){
-    e.preventDefault()
-
-    if(validaNum(primeiroInput.value,segundoInput.value)){
+    e.preventDefault()  
+    let first = parseInt (primeiroInput.value)
+    let second = parseInt (segundoInput.value)
+    if(validaNum(first,second)){
         document.querySelector('.valid-message').style.display= 'block'
         document.querySelector('.invalid-message').style.display= 'none'
         primeiroInput.value = '';
@@ -24,7 +25,10 @@ formulario.addEventListener('submit' , function(e){
 
 segundoInput.addEventListener('input', function(e){
 
-    if(!validaNum (primeiroInput.value,segundoInput.value)){
+    let first = parseInt (primeiroInput.value)
+    let second = parseInt (segundoInput.value)
+
+    if(!validaNum (first,second)){
     document.querySelector('.invalid-message').style.display= 'block';
     document.querySelector('.valid-message').style.display= 'none';
     segundoInput.classList.add('error');

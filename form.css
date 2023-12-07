@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+
+#forms{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: aquamarine;
+    
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.valid-message{
+    color: #fff;
+    background-color: green;
+    display:none;
+}
+
+.invalid-message{
+    color: #fff;
+    background-color: red;
+    display:none;
+}
+
+input.error{
+    outline-color: red;
+    color: red;
+    
+
+}

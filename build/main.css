@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: lightcoral;
+  color: #fff;
+  padding: 2%;
+}
+header h1 {
+  font-family: "Roboto", "sans-serif";
+  text-align: center;
+}
+
+main {
+  padding-top: 3%;
+  width: 1024px;
+  margin: 0 auto;
+}
+main .container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+  position: relative;
+}
+main .container .fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+main .container img {
+  width: 30%;
+}
+
+.fade-out {
+  opacity: 0;
+}

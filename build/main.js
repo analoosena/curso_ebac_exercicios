@@ -1,0 +1,1 @@
+function applyFadeEffect(){document.querySelectorAll(".fadeable").forEach(function(a){a.classList.contains("fade-out")?a.classList.remove("fade-out"):a.classList.add("fade-out")})}

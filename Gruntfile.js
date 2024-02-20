@@ -37,7 +37,7 @@ module.exports = function(grunt){
                             replacement: './styles/main.css'
                         },
                         {
-                            match: 'ENDERECO_/JS',
+                            match: 'ENDERECO_JS',
                             replacement: '../src/script/main.js'
                         }
                     ]
@@ -57,6 +57,10 @@ module.exports = function(grunt){
                         {
                             match: 'ENDERECO_CSS',
                             replacement: './styles/main.min.css'
+                        },
+                        {
+                            match: 'ENDERECO_JS',
+                            replacement: './src/script/main.min.js'
                         }
                     ]
                 },
@@ -80,6 +84,14 @@ module.exports = function(grunt){
                     'prebuild/index.html' : 'src/index.html'
                 }
             }
+        },
+        clean: ['prebuild'],
+        uglify: {
+            target: {
+                files: {
+                    'dist/script/main.min.js' : 'src/script/main.js'
+                }
+            }
         }
     })
 
@@ -88,7 +100,8 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean']);
+    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean', 'uglify']);
 }

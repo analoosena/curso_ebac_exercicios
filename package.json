@@ -14,6 +14,7 @@
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-replace": "^2.0.2"
   },
@@ -165,8 +166,8 @@
     "side-channel": "^1.0.5",
     "source-map": "^0.6.1",
     "sprintf-js": "^1.0.3",
-    "string-template": "^0.2.1",
     "string_decoder": "^0.10.31",
+    "string-template": "^0.2.1",
     "supports-color": "^7.2.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
     "tiny-lr": "^1.1.1",

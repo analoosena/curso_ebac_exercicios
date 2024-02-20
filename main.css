@@ -1,0 +1,17 @@
+body {
+  background-color: #6ab04c;
+}
+body .container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+body .container h1 {
+  font-size: 4em;
+  padding-top: 100px;
+}
+body .container p {
+  font-size: 3em;
+  color: #badc58;
+}
